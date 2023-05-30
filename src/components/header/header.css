@@ -1,0 +1,28 @@
+nav{
+    background-color: #FFFF;
+    box-shadow: 0px 15px 10px -15px #111;
+}
+
+nav div{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    padding: 0 100px;
+}
+
+ul{
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    width: 250px;
+}
+
+li{
+    cursor: pointer;
+    font-family: 'Roboto Serif', serif;
+}
