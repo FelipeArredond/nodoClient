@@ -23,3 +23,15 @@ export async function SignUpRequest(body){
     const res = await data.json();
     return res;
 }
+
+export async function GetCoursesBySchool(id){
+    const data = await fetch(url.api + "course/school/" + id);
+    const res = await data.json();
+    return res;
+}
+
+export async function GetSchools(){
+    const data = await fetch(url.api + "school");
+    const res = await data.json();
+    return res;
+}

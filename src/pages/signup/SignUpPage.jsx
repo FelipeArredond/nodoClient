@@ -19,7 +19,8 @@ export default function SignUpPage() {
       name: name.current.value,
     })
       .then((res) => {
-        console.log(res);
+        if(res.status == 1) alert("Se ha creado el usuario de manera exitosa")
+        if(res.status == 0) alert("Este usuario ya ha sido registrado en la aplicacion")
       })
       .catch((error) => console.error(error));
   }

@@ -1,0 +1,20 @@
+.course-list-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+    padding: 10px;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.course-list-item:hover{
+    transform: translate(5px,-5px);
+}
+
+.course-list-item img{
+    border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+}

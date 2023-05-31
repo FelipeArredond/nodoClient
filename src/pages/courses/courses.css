@@ -3,4 +3,24 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    font-family: 'Roboto Serif', serif;
+    gap: 50px;
  }
+ .course-toggle{
+   background-color: lightgray;
+   height: 60px;
+   width: 90%;
+   padding: 10px;
+   font-size: 25px;
+   border-radius: 15px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+   cursor: pointer;
+   transition: 0.5s ease-in-out;
+ }
+.course-toggle:hover{
+   transition: 0.5s ease-in-out;
+   transform: translate(5px,-5px);
+}
