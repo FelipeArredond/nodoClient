@@ -8,6 +8,7 @@ import LayoutPage from './pages/LayoutPage';
 import LoginPage from './pages/login/LoginPage';
 import SignUpPage from './pages/signup/SignUpPage';
 import CoursesPage from './pages/courses/CoursesPage';
+import AdminPage from './pages/ admin/AdminPage';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,9 @@ const router = createBrowserRouter([
       },{
         path: "/courses",
         element: <CoursesPage/>
+      },{
+        path: "/admin",
+        element: <AdminPage/>
       }
     ]
   },

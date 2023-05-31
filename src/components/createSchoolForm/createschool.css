@@ -1,0 +1,18 @@
+.create-school{
+    display: flex;
+    flex-direction: column;
+}
+
+.create-school-button{
+    width: 50%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+    border: none;
+    font-family: 'Roboto Serif', serif;
+    background-color: #F4F4F4;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+ }

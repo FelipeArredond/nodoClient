@@ -11,13 +11,6 @@ export default function CoursesPage() {
   const [userData, setUserData] = useState(null);
   const [schools, setSchools] = useState([]);
 
-  const validateAuth = () => {
-    if(userData == null){
-      console.log("redirect")
-      navigate("/login")
-    }
-  }
-
   useEffect(() => {
     setUserData(JSON.parse(localStorage.getItem("auth")));
     GetSchools().then((res) => {
@@ -26,7 +19,7 @@ export default function CoursesPage() {
       });
       setSchools(mappedRes);
     });
-    validateAuth();
+    // validateAuth();
   }, []);
 
   return (

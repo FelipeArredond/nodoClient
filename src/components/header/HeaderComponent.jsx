@@ -23,7 +23,7 @@ export default function Header({ isLogged, userRol }) {
             <li onClick={() => navigate("/courses")}>Cursos</li>
           ) : null}
           {isLogged && userRol == "administrador" ? (
-            <li onClick={() => navigate("/courses")}>Panel de Administrador</li>
+            <li onClick={() => navigate("/admin")}>Panel de Administrador</li>
           ) : null}
           {isLogged ? (
             <img

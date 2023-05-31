@@ -35,3 +35,15 @@ export async function GetSchools(){
     const res = await data.json();
     return res;
 }
+
+export async function CreateSchool(body){
+    const data = await fetch(url.api + "school", {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(body)
+    });
+    const res = await data.json();
+    return res;
+}
