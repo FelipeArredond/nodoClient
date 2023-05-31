@@ -7,7 +7,7 @@ nav div{
     display: flex;
     justify-content: space-between;
     color: black;
-    padding: 0 100px;
+    padding: 0 10px;
 }
 
 ul{
