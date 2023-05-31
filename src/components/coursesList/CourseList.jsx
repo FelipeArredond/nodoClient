@@ -19,7 +19,7 @@ export default function CourseList({ idSchool, isVisible }) {
               return (
                 <CourseListItem
                   key={i}
-                  bannerUrl={"http://via.placeholder.com/640x360"}
+                  bannerUrl={item.image}
                   name={item.name}
                   description={item.description}
                 />

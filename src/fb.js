@@ -1,7 +1,7 @@
 import firebase from "firebase/compat/app"
 import "firebase/compat/storage"
 
-export const app = firebase.initializeApp({
+const app = firebase.initializeApp({
     "projectId": "nodo-final",
     "appId": "1:342865473265:web:db225344629d344a3cc350",
     "storageBucket": "nodo-final.appspot.com",
@@ -10,3 +10,5 @@ export const app = firebase.initializeApp({
     "authDomain": "nodo-final.firebaseapp.com",
     "messagingSenderId": "342865473265"
   });
+
+  export default app;

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import CourseList from "../../components/coursesList/CourseList";
 import "./courses.css";

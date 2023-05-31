@@ -1,10 +1,12 @@
 import "./createcourse.css";
 import { CreateCourse, GetSchools } from "../../services/apiRequests";
 import { useEffect, useRef, useState } from "react";
+import app from "../../fb";
 
 export default function CreateCourseForm() {
   const [schools, setSchools] = useState([]);
   const [selected, setSelected] = useState(0);
+  const [imageUrl, setImageUrl] = useState("");
 
   const name = useRef("");
   const description = useRef("");
@@ -12,12 +14,23 @@ export default function CreateCourseForm() {
 
   const handleSelect = (e) => setSelected(e.target.value);
 
+  const handleFile = async (e) => {
+    const file = e.target.files[0];
+    const storageRef = app.storage().ref();
+    const filePath = storageRef.child(file.name);
+    await filePath.put(file);
+    const url = await filePath.getDownloadURL();
+    setImageUrl(url);
+    console.log("Se ha subido la imagen " + file.name);
+  }
+
   const handleForm = (e) => {
     e.preventDefault();
     CreateCourse({
       name: name.current.value,
       description: description.current.value,
       duration: duration.current.value,
+      image: imageUrl,
       idSchool: parseInt(selected)
     }).then((res) => {
         console.log(res);
@@ -52,6 +65,7 @@ export default function CreateCourseForm() {
             </option>
           ))}
         </select>
+        <input type="file" onChange={handleFile} />
         <button className="create-course-button" type="submit">
           Registrar
         </button>
