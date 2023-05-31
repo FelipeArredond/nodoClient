@@ -2,17 +2,31 @@ import { useEffect, useState } from "react";
 import CourseList from "../../components/coursesList/CourseList";
 import "./courses.css";
 import { GetSchools } from "../../services/apiRequests";
+import { useNavigate } from "react-router-dom";
 
 export default function CoursesPage() {
+
+  const navigate = useNavigate();
+
+  const [userData, setUserData] = useState(null);
   const [schools, setSchools] = useState([]);
 
+  const validateAuth = () => {
+    if(userData == null){
+      console.log("redirect")
+      navigate("/login")
+    }
+  }
+
   useEffect(() => {
+    setUserData(JSON.parse(localStorage.getItem("auth")));
     GetSchools().then((res) => {
       let mappedRes = res.map((item) => {
         return { ...item, isVisible: false };
       });
       setSchools(mappedRes);
     });
+    validateAuth();
   }, []);
 
   return (
