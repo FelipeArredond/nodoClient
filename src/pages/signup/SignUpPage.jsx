@@ -13,7 +13,8 @@ export default function SignUpPage() {
     SignUpRequest({
       email: email.current.value,
       password: password.current.value,
-      rol: 1,
+      idRol: 1,
+      idSub: 1,
       age: age.current.value,
       name: name.current.value,
     })
@@ -35,7 +36,15 @@ export default function SignUpPage() {
         <label htmlFor="email">Email</label>
         <input type="text" name="email" id="email" ref={email} />
         <label htmlFor="edad">Edad</label>
-        <input type="number" name="edad" id="edad" min="1" max="100" step="1" ref={age} />
+        <input
+          type="number"
+          name="edad"
+          id="edad"
+          min="1"
+          max="100"
+          step="1"
+          ref={age}
+        />
         <label htmlFor="password">Contraseña</label>
         <input type="password" name="password" id="password" ref={password} />
         <button type="submit">Registrarse</button>
