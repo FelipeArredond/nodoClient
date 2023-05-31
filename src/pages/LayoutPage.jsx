@@ -11,7 +11,7 @@ export default function LayoutPage(){
     },[])
     return(
         <>
-            <Header isLogged={userData ? true : false} />
+            <Header isLogged={userData ? true : false} userRol={userData == null ? "none" : userData.rol}/>
             <main><Outlet/></main>
             <Footer/>
         </>
