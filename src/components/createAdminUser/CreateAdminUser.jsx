@@ -1,37 +1,35 @@
+import "./createadminuser.css";
 import { SignUpRequest } from "../../services/apiRequests";
-import "./signup.css";
 import { useRef } from "react";
 
-export default function SignUpPage() {
+export default function CreateAdminUser() {
   const email = useRef("");
   const password = useRef("");
   const age = useRef(0);
   const name = useRef("");
 
-  function handleSubmit(e) {
+  const handleForm = (e) => {
     e.preventDefault();
     SignUpRequest({
       email: email.current.value,
       password: password.current.value,
-      idRol: 1,
+      idRol: 2,
       idSub: 1,
       age: age.current.value,
       name: name.current.value,
     })
       .then((res) => {
-        if(res.status == 1) alert("Se ha creado el usuario de manera exitosa")
-        if(res.status == 0) alert("Este usuario ya ha sido registrado en la aplicacion")
+        if (res.status == 1) alert("Se ha creado el usuario de manera exitosa");
+        if (res.status == 0)
+          alert("Este usuario ya ha sido registrado en la aplicacion");
       })
       .catch((error) => console.error(error));
-  }
+  };
 
   return (
     <>
-      <form onSubmit={handleSubmit} action="submit" className="signup-form">
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/felipe728-c4a03.appspot.com/o/loginicon.png?alt=media&token=c28f673b-d79c-4147-874e-37329a5310d3"
-          alt="logo"
-        />
+      <h3>Registrto de Administrador</h3>
+      <form action="submit" className="create-admin" onSubmit={handleForm}>
         <label htmlFor="nombre">Nombre</label>
         <input type="text" name="nombre" id="nombre" ref={name} />
         <label htmlFor="email">Email</label>
@@ -48,7 +46,9 @@ export default function SignUpPage() {
         />
         <label htmlFor="password">Contraseña</label>
         <input type="password" name="password" id="password" ref={password} />
-        <button type="submit" className="signup-button">Registrarse</button>
+        <button className="create-admin-button" type="submit">
+          Registrar
+        </button>
       </form>
     </>
   );

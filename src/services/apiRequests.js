@@ -24,6 +24,12 @@ export async function SignUpRequest(body){
     return res;
 }
 
+export async function GetCourses(){
+    const data = await fetch(url.api + "course");
+    const res = await data.json();
+    return res;
+}
+
 export async function GetCoursesBySchool(id){
     const data = await fetch(url.api + "course/school/" + id);
     const res = await data.json();
@@ -38,6 +44,30 @@ export async function GetSchools(){
 
 export async function CreateSchool(body){
     const data = await fetch(url.api + "school", {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(body)
+    });
+    const res = await data.json();
+    return res;
+}
+
+export async function CreateCourse(body){
+    const data = await fetch(url.api + "course", {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(body)
+    });
+    const res = await data.json();
+    return res;
+}
+
+export async function CreateClass(body){
+    const data = await fetch(url.api + "class", {
         method: "POST",
         headers: {
             "Content-type": "application/json"

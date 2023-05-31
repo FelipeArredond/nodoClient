@@ -1,16 +1,19 @@
 import "./createschool.css";
 import { CreateSchool } from "../../services/apiRequests";
-
-let schoolName = ""
+import { useState } from "react";
 
 export default function CreateSchoolForm() {
+    const [schoolName, setSchoolName] = useState("");
 
-  const handleinputChange = (e) => (schoolName = e.target.value);
+  const handleinputChange = (e) => setSchoolName(e.target.value);
 
   const handleForm = (e) => {
     e.preventDefault();
     CreateSchool({name: schoolName})
-        .then(res => console.log(res))
+        .then(res => {
+            console.log(res);
+            alert("Se ha creado la escuela correctamente!")
+          })
   };
 
   return (
