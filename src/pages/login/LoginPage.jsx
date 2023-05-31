@@ -1,10 +1,20 @@
+import { useNavigate } from "react-router-dom";
 import { LoginRequest } from "../../services/apiRequests";
 import "./login.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function LoginPage() {
+
+  const navigate = useNavigate()
+
   const email = useRef("");
   const password = useRef("");
+
+  useEffect(() => {
+    if(JSON.parse(localStorage.getItem("auth"))){
+      navigate("/courses")
+    }
+  },[])
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -13,8 +23,12 @@ export default function LoginPage() {
       password: password.current.value,
     })
       .then((res) => {
-        console.log(res);
-        localStorage.setItem("auth", JSON.stringify(res));
+        if(Object.keys(res).includes("token")){
+          localStorage.setItem("auth", JSON.stringify(res));
+          window.location.reload();
+        }else{
+          alert("Error de logueo")
+        }
       })
       .catch((error) => console.error(error));
   }
