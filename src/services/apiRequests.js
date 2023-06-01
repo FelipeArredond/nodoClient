@@ -36,6 +36,12 @@ export async function GetCoursesBySchool(id){
     return res;
 }
 
+export async function GetClassesByCourse(id){
+    const data = await fetch(url.api + "class/course/" + id);
+    const res = await data.json();
+    return res;
+}
+
 export async function GetSchools(){
     const data = await fetch(url.api + "school");
     const res = await data.json();

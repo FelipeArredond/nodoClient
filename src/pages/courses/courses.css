@@ -4,12 +4,12 @@
     flex-direction: column;
     align-items: start;
     font-family: 'Roboto Serif', serif;
-    gap: 50px;
+    gap: 20px;
  }
  .course-toggle{
    background-color: lightgray;
    height: 60px;
-   width: 90%;
+   width: 100%;
    padding: 10px;
    font-size: 25px;
    border-radius: 15px;

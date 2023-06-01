@@ -19,6 +19,7 @@ export default function CourseList({ idSchool, isVisible }) {
               return (
                 <CourseListItem
                   key={i}
+                  id={item.idCourse}
                   bannerUrl={item.image}
                   name={item.name}
                   description={item.description}
