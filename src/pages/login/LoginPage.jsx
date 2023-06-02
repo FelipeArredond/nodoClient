@@ -34,7 +34,7 @@ export default function LoginPage() {
   }
 
   return (
-    <>
+    <div className="log-form">
       <form onSubmit={handleSubmit} action="submit" className="login-form">
         <img
           src="https://firebasestorage.googleapis.com/v0/b/felipe728-c4a03.appspot.com/o/loginicon.png?alt=media&token=c28f673b-d79c-4147-874e-37329a5310d3"
@@ -46,6 +46,6 @@ export default function LoginPage() {
         <input type="password" name="password" id="password" ref={password} />
         <button type="submit" className="login-button">Ingresar</button>
       </form>
-    </>
+    </div>
   );
 }

@@ -1,4 +1,7 @@
 .login-form{
+    background-color: #6429CD;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
     margin: 50px auto;
     display: flex;
     flex-direction: column;
@@ -19,15 +22,19 @@
 
 .login-form input{
     width: 70%;
-    height: 20px;
+    height: 30px;
     border-radius: 5px;
-    border: solid 1px black;
-    background-color: lightgray;
+    border: solid 2px white;
+    background-color: white;
     padding: 4px;
     cursor: pointer;
 }
 
 .login-button{
+    background-color: white;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    color: #6429CD !important;
+    font-weight: bold !important;
     width: auto;
     padding: 5px;
     height: 30px;
@@ -40,7 +47,7 @@
 }
 
 .login-form input[type="text"]{
-    font-family: 'Roboto Serif', serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .login-form input:focus{

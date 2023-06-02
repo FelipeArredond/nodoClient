@@ -11,7 +11,6 @@ export default function Footer() {
                 <li>Línea nacional: 01 8000 515 900</li>
                 <li>Línea de atención (57) 604 2619500</li>
                 <li>Whatsapp: (57) 310 8992908</li>
-                <li>Atencion al visitante</li>
             </ul>
         </div>
         <div>
@@ -22,7 +21,6 @@ export default function Footer() {
                 <li>Posgrados</li>
                 <li>Programas virtuales</li>
                 <li>Cursos, diplomados y seminarios</li>
-                <li>Alta Dirección</li>
             </ul>
         </div>
         <div>
@@ -33,7 +31,6 @@ export default function Footer() {
                 <li>Personería jurídica</li>
                 <li>Reglamentos y estatutos</li>
                 <li>Linea de transparencia</li>
-                <li>Preguntas frecuentes</li>
             </ul>
         </div>
         <div>
@@ -44,7 +41,6 @@ export default function Footer() {
                 <li>Línea nacional: 01 8000 515 900</li>
                 <li>Línea de atención (57) 604 2619500</li>
                 <li>Whatsapp: (57) 310 8992908</li>
-                <li>Atencion al visitante</li>
             </ul>
         </div>
     </footer>

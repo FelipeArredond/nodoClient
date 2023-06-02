@@ -10,6 +10,7 @@ import SignUpPage from './pages/signup/SignUpPage';
 import CoursesPage from './pages/courses/CoursesPage';
 import AdminPage from './pages/ admin/AdminPage';
 import PaymentPage from './pages/payments/PaymentPage';
+import HomePage from './pages/homepage/HomePage';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children: [
       {
-        path: "/"
+        path: "/",
+        element: <HomePage/>
       },{
         path: "/login",
         element: <LoginPage/>

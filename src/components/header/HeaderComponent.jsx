@@ -8,7 +8,8 @@ export default function Header({ isLogged, userRol }) {
     <nav>
       <div>
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/felipe728-c4a03.appspot.com/o/eafit.png?alt=media&token=fdfe3328-8601-4caa-b3c7-6c4c42c580c1"
+          className="header-image"
+          src="https://firebasestorage.googleapis.com/v0/b/nodo-final.appspot.com/o/logo-blanco.png?alt=media&token=229c8297-35ee-47ff-9c95-e8cff76d1bfa&_gl=1*dggtd9*_ga*MTk1ODQxNTE4MS4xNjgxNTkwOTI3*_ga_CW55HF8NVT*MTY4NTcyNDI0My42LjEuMTY4NTcyNTM4OS4wLjAuMA.."
           alt="logo-eafit"
         />
         <ul>

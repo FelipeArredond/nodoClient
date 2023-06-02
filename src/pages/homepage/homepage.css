@@ -1,0 +1,21 @@
+.title-home{
+    color: black;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 60px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+.image-container{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-image{
+    width: 50%;
+    margin: 0 auto;
+}
