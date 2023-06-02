@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { GeneratePaymentReference, PostSubDetail, TransactionStatus } from "../../services/apiRequests";
 import moment from "moment";
+import "./payments.css"
 
 /* eslint-disable react/no-unknown-property */
 export default function PaymentPage() {
@@ -38,7 +39,7 @@ export default function PaymentPage() {
   },[idPago])
 
   return (
-    <>
+    <div className="payments-page">
       <h1>Pagos</h1>
       <form action="https://checkout.wompi.co/p/" method="GET">
         <input
@@ -50,8 +51,8 @@ export default function PaymentPage() {
         <input type="hidden" name="amount-in-cents" value="7000000" />
         <input type="hidden" name="reference" value={paymentReference} />
         <input type="hidden" name="redirect-url" value="http://localhost:5173/pagos" />
-        <button type="submit">Pagar con Wompi</button>
+        <button type="submit" className="wompi-button">Pagar con Wompi</button>
       </form>
-    </>
+    </div>
   );
 }

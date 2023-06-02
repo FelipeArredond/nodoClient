@@ -1,0 +1,22 @@
+.payments-page{
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.wompi-button{
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: bold !important;
+    color: #6429CD !important;
+    background-color: white;
+    width: auto;
+    padding: 5px;
+    height: 30px;
+    font-size: 15px;
+    font-family: 'Roboto Serif', serif;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+    border-radius: 10px;
+}

@@ -21,6 +21,9 @@ export default function Header({ isLogged, userRol }) {
             <li onClick={() => navigate("/signup")}>Crear una cuenta</li>
           ) : null}
           {isLogged ? (
+            <li onClick={() => navigate("/pagos")}>Pagar sub</li>
+          ) : null}
+          {isLogged ? (
             <li onClick={() => navigate("/my-profile")}>Mi perfil</li>
           ) : null}
           {isLogged && userRol == "estudiante" ? (

@@ -26,7 +26,7 @@ export default function SignUpPage() {
           let started_sub = now_sub.toISOString();
           let end_date = moment(started_sub).add(1, "month");
           PostSubDetail({
-            idSub: 2,
+            idSub: 1,
             idPerson: res.idPerson,
             startDate: started_sub,
             endDate: end_date,
