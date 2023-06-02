@@ -20,6 +20,9 @@ export default function Header({ isLogged, userRol }) {
           {!isLogged ? (
             <li onClick={() => navigate("/signup")}>Crear una cuenta</li>
           ) : null}
+          {isLogged ? (
+            <li onClick={() => navigate("/my-profile")}>Mi perfil</li>
+          ) : null}
           {isLogged && userRol == "estudiante" ? (
             <li onClick={() => navigate("/courses")}>Cursos</li>
           ) : null}
@@ -33,6 +36,7 @@ export default function Header({ isLogged, userRol }) {
               alt="logout"
               onClick={() => {
                 localStorage.removeItem("auth");
+                navigate("/")
                 window.location.reload();
               }}
             />

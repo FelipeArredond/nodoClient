@@ -113,3 +113,9 @@ export async function PostSubDetail(body){
     const res = await data.json();
     return res;
 }
+
+export async function GetSubDetail(id){
+    const data = await fetch(url.api + "subdetail/" + id);
+    const res = await data.json();
+    return res;
+}

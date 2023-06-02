@@ -11,6 +11,7 @@ import CoursesPage from './pages/courses/CoursesPage';
 import AdminPage from './pages/ admin/AdminPage';
 import PaymentPage from './pages/payments/PaymentPage';
 import HomePage from './pages/homepage/HomePage';
+import MyProfile from './pages/profile/ProfilePage';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,9 @@ const router = createBrowserRouter([
       },{
         path: "/pagos",
         element: <PaymentPage/>
+      },{
+        path: "/my-profile",
+        element: <MyProfile/>
       }
     ]
   },

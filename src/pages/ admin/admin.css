@@ -14,11 +14,14 @@
  }
 
  .admin-option{
+    background-color: #6429CD !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    color: white;
     width: auto;
     text-align: center;
-    padding: 5px;
+    padding: 8px;
     border-radius: 10px;
-    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
     border: none;
     font-family: 'Roboto Serif', serif;
     background-color: #F4F4F4;

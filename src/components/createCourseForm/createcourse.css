@@ -4,6 +4,8 @@
 }
 
 .create-course-button{
+    background-color: #6429CD;
+    color: white;
     width: 50%;
     margin: 5px auto;
     text-align: center;

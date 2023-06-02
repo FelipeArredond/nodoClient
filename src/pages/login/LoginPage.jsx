@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { LoginRequest } from "../../services/apiRequests";
+import { GetSubDetail, LoginRequest } from "../../services/apiRequests";
 import "./login.css";
 import { useEffect, useRef } from "react";
 
@@ -25,6 +25,10 @@ export default function LoginPage() {
       .then((res) => {
         if(Object.keys(res).includes("token")){
           localStorage.setItem("auth", JSON.stringify(res));
+          GetSubDetail(res.idPerson)
+            .then(res => {
+              localStorage.setItem("sub", JSON.stringify(res))
+            })
           window.location.reload();
         }else{
           alert("Error de logueo")

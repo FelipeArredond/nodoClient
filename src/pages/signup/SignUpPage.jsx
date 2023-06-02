@@ -1,4 +1,5 @@
-import { SignUpRequest } from "../../services/apiRequests";
+import moment from "moment";
+import { PostSubDetail, SignUpRequest } from "../../services/apiRequests";
 import "./signup.css";
 import { useRef } from "react";
 
@@ -19,8 +20,20 @@ export default function SignUpPage() {
       name: name.current.value,
     })
       .then((res) => {
-        if(res.status == 1) alert("Se ha creado el usuario de manera exitosa")
-        if(res.status == 0) alert("Este usuario ya ha sido registrado en la aplicacion")
+        if (res.status == 1) {
+          alert("Se ha creado el usuario de manera exitosa");
+          let now_sub = new Date();
+          let started_sub = now_sub.toISOString();
+          let end_date = moment(started_sub).add(1, "month");
+          PostSubDetail({
+            idSub: 2,
+            idPerson: res.idPerson,
+            startDate: started_sub,
+            endDate: end_date,
+          }).then((res) => console.log(res));
+        }
+        if (res.status == 0)
+          alert("Este usuario ya ha sido registrado en la aplicacion");
       })
       .catch((error) => console.error(error));
   }
@@ -48,7 +61,9 @@ export default function SignUpPage() {
         />
         <label htmlFor="password">Contraseña</label>
         <input type="password" name="password" id="password" ref={password} />
-        <button type="submit" className="signup-button">Registrarse</button>
+        <button type="submit" className="signup-button">
+          Registrarse
+        </button>
       </form>
     </>
   );
