@@ -25,7 +25,7 @@ export default function CoursesPage() {
 
   return (
     <div className="course-container">
-      <h1>Cursos!</h1>
+      <h1>Escuelas disponibles para ti</h1>
       {schools.length > 0
         ? schools.map((item, i) => (
             <>

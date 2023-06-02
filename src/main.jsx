@@ -9,6 +9,7 @@ import LoginPage from './pages/login/LoginPage';
 import SignUpPage from './pages/signup/SignUpPage';
 import CoursesPage from './pages/courses/CoursesPage';
 import AdminPage from './pages/ admin/AdminPage';
+import PaymentPage from './pages/payments/PaymentPage';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,9 @@ const router = createBrowserRouter([
       },{
         path: "/admin",
         element: <AdminPage/>
+      },{
+        path: "/pagos",
+        element: <PaymentPage/>
       }
     ]
   },

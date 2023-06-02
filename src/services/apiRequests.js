@@ -83,3 +83,33 @@ export async function CreateClass(body){
     const res = await data.json();
     return res;
 }
+
+export async function TransactionStatus(id){
+    const data = await fetch("https://sandbox.wompi.co/v1/transactions/"+id);
+    const res = await data.json();
+    return res;
+}
+
+export async function GeneratePaymentReference(body){
+    const data = await fetch(url.api + "payment_references", {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(body)
+    })
+    const res = await data.json();
+    return res;
+}
+
+export async function PostSubDetail(body){
+    const data = await fetch(url.api + "subdetail", {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(body)
+    })
+    const res = await data.json();
+    return res;
+}
