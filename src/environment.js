@@ -1,3 +1,3 @@
 export const  url = {
-    api: "http://localhost:8080/api/"
+    api: "http://184.72.142.241:8080/api/"
 }
